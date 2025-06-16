@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -35,7 +35,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <>
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route
@@ -63,7 +63,7 @@ function App() {
           }
         />
       </Routes>
-    </Router>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../img/v.png';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -21,7 +22,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="bg-white/10 backdrop-blur-md p-8 rounded-lg shadow-lg w-full max-w-md border border-white/20">
         <div className="flex justify-center mb-6">
-          <img src="/img/v.png" alt="Logo" className="h-8" />
+          <img src={logo} alt="Logo" className="h-8" />
         </div>
         {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
         <form onSubmit={handleSubmit}>
